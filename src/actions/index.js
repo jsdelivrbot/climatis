@@ -1,1 +1,3 @@
-const API_KEY = '81bac4cd0d746ee8cfb4414056b86b37';
+import weather_key from '../../keys';
+
+const API_KEY = weather_key;
