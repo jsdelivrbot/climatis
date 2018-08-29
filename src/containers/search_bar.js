@@ -8,6 +8,9 @@ class SearchBar extends Component {
     constructor(props){
         super(props);
         this.state = {term: ' '};
+
+        this.onInputChange = this.onInputChange.bind(this);
+        this.onFormSubmit = this.onFormSubmit.bind(this);
     }
 
     onInputChange(event){
@@ -24,14 +27,14 @@ class SearchBar extends Component {
         return(
             <form 
                 className="input-group mb-3"
-                onSubmit={ (event) => this.onFormSubmit(event) }
+                onSubmit={ this.onFormSubmit }
             >
                 <input 
                     type="text"
                     className="form-control"
                     placeholder="Enter a city name for the forecast"
                     value={ this.state.term }
-                    onChange={ (event) => this.onInputChange(event) }
+                    onChange={ this.onInputChange }
                 />
                 <span className="input-group-btn">
                     <button 
