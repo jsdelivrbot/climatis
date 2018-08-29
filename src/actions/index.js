@@ -1,7 +1,7 @@
 import axios from 'axios';
-import weather_key from '../../keys';
+import { WEATHER_KEY } from '../../keys';
 
-const API_KEY = weather_key;
+const API_KEY = WEATHER_KEY;
 const ROOT_URL = `https://samples.openweathermap.org/data/2.5/forecast?appid=${API_KEY}`;
 
 
